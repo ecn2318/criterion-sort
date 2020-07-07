@@ -1,3 +1,38 @@
+.jumbotron {
+  width: 1200px;
+}
+
+.wrapper {
+margin: 0 auto;
+  max-width: 1200px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding-top: 150px;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+
+
+/*
+.wrapper {
+  padding-top: 50px;
+  background: #ECEFF1;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +71,4 @@
     transform: rotate(360deg);
   }
 }
+*/
