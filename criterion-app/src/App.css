@@ -19,7 +19,9 @@ margin: 0 auto;
   overflow: auto;
 }
 
-
+.no-decor {
+  cursor: pointer;
+}
 /*
 
 

@@ -18,10 +18,12 @@ export const Wrapper = (props) => {
     </div>
 }
 
-export const TableHeader = (props) => {
-    return <th onClick={(e) => props.onClick(e)} value={props.value} scope="col">{props.value}</th>
 
+
+export const TableHeader = (props) => {
+    return <th onClick={(e) => props.onClick(e)} value={props.value} scope="col" className="no-decor">{props.value}</th>
 }
+
 export const Table = (props) => {
     return <table className="table">
         <thead>
