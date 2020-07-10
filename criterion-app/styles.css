@@ -1,0 +1,8 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+  }

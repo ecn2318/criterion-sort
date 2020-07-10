@@ -60,6 +60,31 @@ const defaultSorted = [{
   order: 'asc'
 }];
 
+const expandRow = {
+  renderer: row => (
+    <div>
+      <h5>Synopsis</h5>
+      <p>{row.Description}</p>
+    </div>
+  ),
+  showExpandColumn: true,
+  expandHeaderColumnRenderer: ({ isAnyExpands }) => {
+    if (isAnyExpands) {
+      return <b>-</b>;
+    }
+    return <b>+</b>;
+  },
+  expandColumnRenderer: ({ expanded }) => {
+    if (expanded) {
+      return (
+        <b>-</b>
+      );
+    }
+    return (
+      <b>...</b>
+    );
+  }
+};
 
 class App extends React.Component {
   state = { criterion }
@@ -69,12 +94,13 @@ class App extends React.Component {
 
       <BootstrapTable
         bootstrap4
-        keyField="id"
+        keyField="ID"
         data={criterion}
         columns={columns}
         defaultSorted={defaultSorted}
         pagination={paginationFactory()}
         filter={filterFactory()}
+        expandRow={expandRow}
       />
 
     </Wrapper>
