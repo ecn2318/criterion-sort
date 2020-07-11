@@ -1,12 +1,13 @@
 import React from "react";
+import "../App.css";
 
-export const SearchBar = (props) => {
+
+
+export const SearchInput = (props) => {
     return (
         <div>
-
-
             <div className="form-group">
-                <label htmlFor="language">Search Term:</label>
+                <label htmlFor="language">Search Director:</label>
                 <input
                     onChange={e => props.onChange(e.target.value)}
                     value={props.search}
@@ -14,11 +15,10 @@ export const SearchBar = (props) => {
                     list="term"
                     type="text"
                     className="form-control"
-                    placeholder="Type in a search term"
+                    placeholder="ozu yasujiro"
                     id="term"
                 />
             </div>
-            <button onClick={() => props.handleFormSubmit()}>Search</button>
         </div>
     );
 }

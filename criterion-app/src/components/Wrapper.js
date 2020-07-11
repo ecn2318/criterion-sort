@@ -1,8 +1,7 @@
 import React from "react";
 import "../App.css";
 
-
-export const Wrapper = (props) => {
+function Wrapper(props) {
     return <div>
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
@@ -11,30 +10,11 @@ export const Wrapper = (props) => {
                 <hr></hr>
                 <p>data source: @morbusiff</p>
                 <p className="lead">
-                    <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <a className="btn btn-info btn-lg" href="https://www.criterionchannel.com/" target="_blank" role="button">Watch now</a>
                 </p>
             </div>
         </div>
     </div>
 }
 
-
-
-export const TableHeader = (props) => {
-    return <th onClick={(e) => props.onClick(e)} value={props.value} scope="col" className="no-decor">{props.value}</th>
-}
-
-export const Table = (props) => {
-    return <table className="table">
-        <thead>
-            <tr>
-                {props.headers.map(header => {
-                    return <TableHeader onClick={props.onClick} value={header} />
-                })}
-            </tr>
-        </thead>
-        <tbody>
-            {props.children}
-        </tbody>
-    </table>
-}
+export default Wrapper;
