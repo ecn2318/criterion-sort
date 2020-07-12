@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Wrapper from "./components/Wrapper";
 import { Table } from "./components/Table";
-import { TableRow, RowExp } from "./components/TableRow";
+import { TableRow } from "./components/TableRow";
 import { SearchInput } from "./components/SearchInput";
 import criterion from "./criterion.json";
 
@@ -10,7 +10,7 @@ export const App = (props) => {
     const [films, setFilms] = useState({
         data: criterion,
         headers: ["#", "Type", "Spine", "Title", "Director"
-            , "Country", "Year", "Duration", ""],
+            , "Country", "Year", "Duration"],
         sorted: "desc"
     });
     const [search, setSearch] = useState("");
@@ -49,21 +49,21 @@ export const App = (props) => {
 
             <Table headers={films.headers} onClick={runSort}>
                 {filtered.map((film) => (
-                    <Fragment>
-                        <TableRow
-                            id={film.ID}
-                            key={film.ID}
-                            title={film.Title}
-                            director={film.Director}
-                            country={film.Country}
-                            year={film.Year}
-                            duration={film.Duration}
-                            type={film.Type}
-                            spine={film.Spine}
-                            Description={film.Description}
-                            {...film}
-                        />
-                    </Fragment>
+
+                    <TableRow
+                        id={film.ID}
+                        key={film.ID}
+                        title={film.Title}
+                        director={film.Director}
+                        country={film.Country}
+                        year={film.Year}
+                        duration={film.Duration}
+                        type={film.Type}
+                        spine={film.Spine}
+
+                        {...film}
+                    />
+
                 ))}
 
             </Table>
