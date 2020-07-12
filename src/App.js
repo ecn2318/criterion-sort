@@ -60,7 +60,6 @@ export const App = (props) => {
                         duration={film.Duration}
                         type={film.Type}
                         spine={film.Spine}
-
                         {...film}
                     />
 
