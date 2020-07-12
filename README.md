@@ -1,6 +1,6 @@
 # Criterion Channel Directory
 
-![demogif]()
+![demogif](./public/assets/critdemo.gif)
 
 Lists every video offered by Criterion Channel as of 2019-06-21 in a sortable/ filterable table format.
 
@@ -18,6 +18,3 @@ Credits: [@morbusiff](https://www.reddit.com/user/morbusiff/)
 
 ## Deployed
 [Heroku link](https://afternoon-plateau-65207.herokuapp.com/)
-
-## Screenshots 
-![demo]()
